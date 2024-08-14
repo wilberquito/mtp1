@@ -1,11 +1,8 @@
-# Xeus Cling Jupyter Kernel for using on Notebooks
+# MTP1 on Notebooks
 
 In this README you will find the instructions
-to build the images and create a running container.
-
-You also have a notebook example to interact with the
-notebook running inside the container and the differents
-C++ kernels.
+to build the images and create the running container
+to interact with the notebooks and the different C++ kernels.
 
 If you want to know more how it works you can read
 this interesting [post](https://blog.jupyter.org/interactive-workflows-for-c-with-jupyter-fe9b54227d92).
@@ -13,7 +10,7 @@ this interesting [post](https://blog.jupyter.org/interactive-workflows-for-c-wit
 ### Build image
 
 ```
-docker build -t <image-name> .
+docker build -t mtp1 .
 ```
 
 ### Run image
@@ -21,11 +18,11 @@ docker build -t <image-name> .
 > logs detatached
 
 ```
-docker run -dp 127.0.0.1:8888:8888 -v $(pwd)/notebooks:/cpp/notebooks --name <container-name> <image-name>
+docker run -dp 127.0.0.1:8888:8888 -v $(pwd)/notebooks:/cpp/notebooks --name notebooks-mtp1 mtp1
 ```
 
 > logs presence
 
 ```
-docker run -p 127.0.0.1:8888:8888 -v $(pwd)/notebooks:/cpp/notebooks --name <container-name> <image-name>
+docker run -p 127.0.0.1:8888:8888 -v $(pwd)/notebooks:/cpp/notebooks --name notebooks-mtp1 mtp1
 ```
