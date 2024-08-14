@@ -1,6 +1,6 @@
 FROM ubuntu:18.04
 
-LABEL maintainer="Your Name <your.email@example.com>"
+LABEL maintainer="Wilber B. Quito typingwil@gmail.com"
 
 # Install necessary dependencies
 RUN apt-get update && apt-get install -y \
@@ -21,8 +21,7 @@ ENV PATH=/opt/miniconda3/bin:$PATH
 RUN /opt/miniconda3/bin/conda create -n cpp python=3.11 -y && \
     bash -c "source /opt/miniconda3/bin/activate cpp && \
     conda install xeus-cling -c conda-forge -y && \
-    pip install notebook==7.2.1" 
-
+    pip install notebook==7.2.1"
 
 # Set the working directory
 WORKDIR /cpp
@@ -32,4 +31,3 @@ COPY . .
 
 # Activate the environment by default
 CMD ["bash", "-c", "source /opt/miniconda3/bin/activate cpp && jupyter notebook --ip=0.0.0.0 --no-browser --allow-root"]
-
