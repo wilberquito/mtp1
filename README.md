@@ -1,5 +1,7 @@
 # MTP1 on Notebooks
 
+![Preview](./preview-xeus-notebook.png)
+
 In this README you will find the instructions
 to build the images and create the running container
 to interact with the notebooks and the different C++ kernels.
