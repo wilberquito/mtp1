@@ -17,13 +17,13 @@ docker build -t mtp1 .
 
 ### Run image
 
-> logs detatached
+_**hide logs (detached container's shell)**_
 
 ```
 docker run -dp 127.0.0.1:8888:8888 -v $(pwd)/notebooks:/cpp/notebooks --name notebooks-mtp1 mtp1
 ```
 
-> logs presence
+_**print logs (attached container's shell)**_
 
 ```
 docker run -p 127.0.0.1:8888:8888 -v $(pwd)/notebooks:/cpp/notebooks --name notebooks-mtp1 mtp1
